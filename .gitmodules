@@ -1,0 +1,3 @@
+[submodule "PyRival"]
+	path = PyRival
+	url = https://github.com/cheran-senthil/PyRival
