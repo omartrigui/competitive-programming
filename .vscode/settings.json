@@ -1,0 +1,14 @@
+{
+    "editor.hover.enabled": false,
+    "python.REPL.enableREPLSmartSend": false,
+    "editor.parameterHints.enabled": false,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    "cSpell.enabled": false,
+    "editor.suggest.showSnippets": false,
+    "github.copilot.editor.enableAutoCompletions": false,
+    "github.copilot.editor.enableCodeActions": false
+}
