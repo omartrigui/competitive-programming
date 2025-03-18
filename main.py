@@ -13,7 +13,7 @@ from string import ascii_lowercase, ascii_uppercase
 from types import GeneratorType
 from functools import lru_cache
 
-sys.setrecursionlimit(10 ** 9)
+# sys.setrecursionlimit(10 ** 4)
 
 
 def main():
