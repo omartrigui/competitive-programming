@@ -8,7 +8,7 @@ from collections import defaultdict, deque, Counter, OrderedDict
 from heapq import heapify, heappop, heappush
 from io import BytesIO, IOBase
 from itertools import product, permutations, combinations, combinations_with_replacement, accumulate, compress
-from math import gcd, floor, sqrt, pi, factorial, ceil, inf
+from math import gcd, floor, sqrt, pi, factorial, ceil, inf, isqrt
 from string import ascii_lowercase, ascii_uppercase
 from types import GeneratorType
 from functools import lru_cache
@@ -80,6 +80,23 @@ def mp():
 def li():
     return list(map(int, input().split()))
 
+def bootstrap(f, stack=[]):
+    def wrappedfunc(*args, **kwargs):
+        if stack:
+            return f(*args, **kwargs)
+        to = f(*args, **kwargs)
+        while True:
+            if type(to) is GeneratorType:
+                stack.append(to)
+                to = next(to)
+            else:
+                stack.pop()
+                if not stack:
+                    break
+                to = stack[-1].send(to)
+        return to
+
+    return wrappedfunc
 
 if __name__ == "__main__":
     main()
