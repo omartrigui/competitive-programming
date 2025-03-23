@@ -8,21 +8,27 @@ def factors(n):
 
 
 def prime_factors(n):
-    ans = list()
-    while n % 2 == 0:
-        ans.append(2),
-        n = n / 2
-
-    for i in range(3, int(math.sqrt(n)) + 1, 2):
-
-        while n % i == 0:
-            ans.append(i),
-            n = n / i
-
-    if n > 2:
-        ans.append(n)
-
-    return ans
+    factors = []
+    
+    for p in [2, 3, 5]:
+        while n % p == 0:
+            factors.append(p)
+            n //= p
+    
+    increments = [4, 2, 4, 2, 4, 6, 2, 6]
+    i = 0
+    d = 7
+    
+    while d*d <= n:
+        while n % d == 0:
+            factors.append(d)
+            n //= d
+        d += increments[i]
+        i = (i + 1) % 8
+        
+    if n > 1:
+        factors.append(n)
+    return factors
 
 
 def divisors(n):

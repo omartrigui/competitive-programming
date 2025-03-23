@@ -2,16 +2,17 @@
 import os
 import random
 import sys
-
 from bisect import bisect_left, bisect_right, insort_left, insort_right
-from collections import defaultdict, deque, Counter, OrderedDict
-from heapq import heapify, heappop, heappush
+from collections import Counter, OrderedDict, defaultdict, deque
+from functools import lru_cache
+from heapq import heapify, heappop, heappush, heappushpop
 from io import BytesIO, IOBase
-from itertools import product, permutations, combinations, combinations_with_replacement, accumulate, compress
-from math import gcd, floor, sqrt, pi, factorial, ceil, inf, isqrt
+from itertools import (accumulate, combinations, combinations_with_replacement,
+                       compress, permutations, product)
+from math import ceil, factorial, floor, gcd, inf, isqrt, pi, sqrt
+from re import sub
 from string import ascii_lowercase, ascii_uppercase
 from types import GeneratorType
-from functools import lru_cache
 
 # sys.setrecursionlimit(10 ** 4)
 
@@ -20,6 +21,7 @@ def main():
     t = int(input())
     for t in range(t):
         n = int(input())
+
 
 class FastIO(IOBase):
     def __init__(self, file):
@@ -65,7 +67,8 @@ class IOWrapper(IOBase):
         self.read = lambda: self.buffer.read().decode("ascii")
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
-if os.environ.get('LOCAL') != '1':
+
+if os.environ.get("LOCAL") != "1":
     sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 
@@ -79,6 +82,7 @@ def mp():
 
 def li():
     return list(map(int, input().split()))
+
 
 def bootstrap(f, stack=[]):
     def wrappedfunc(*args, **kwargs):
@@ -97,6 +101,7 @@ def bootstrap(f, stack=[]):
         return to
 
     return wrappedfunc
+
 
 if __name__ == "__main__":
     main()
