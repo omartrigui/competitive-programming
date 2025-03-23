@@ -1,25 +1,28 @@
 #!/usr/bin/env python
 import os
 import random
+import re
 import sys
-
+import time
 from bisect import bisect_left, bisect_right, insort_left, insort_right
-from collections import defaultdict, deque, Counter, OrderedDict
-from heapq import heapify, heappop, heappush
+from collections import Counter, OrderedDict, defaultdict, deque
+from functools import lru_cache
+from heapq import heapify, heappop, heappush, heappushpop
 from io import BytesIO, IOBase
-from itertools import product, permutations, combinations, combinations_with_replacement, accumulate, compress
-from math import gcd, floor, sqrt, pi, factorial, ceil, inf, isqrt
+from itertools import (accumulate, combinations, combinations_with_replacement,
+                       compress, permutations, product)
+from math import ceil, factorial, floor, gcd, inf, isqrt, log2, pi, sqrt
 from string import ascii_lowercase, ascii_uppercase
 from types import GeneratorType
-from functools import lru_cache
 
 # sys.setrecursionlimit(10 ** 4)
 
 
 def main():
     t = int(input())
-    for t in range(t):
+    for _ in range(t):
         n = int(input())
+
 
 class FastIO(IOBase):
     def __init__(self, file):
@@ -33,7 +36,8 @@ class FastIO(IOBase):
 
     def read(self):
         while True:
-            b = os.read(self._fd, max(os.fstat(self._fd).st_size, self.BUFSIZE))
+            b = os.read(self._fd, max(
+                os.fstat(self._fd).st_size, self.BUFSIZE))
             if not b:
                 break
             ptr = self.buffer.tell()
@@ -43,7 +47,8 @@ class FastIO(IOBase):
 
     def readline(self):
         while self.newlines == 0:
-            b = os.read(self._fd, max(os.fstat(self._fd).st_size, self.BUFSIZE))
+            b = os.read(self._fd, max(
+                os.fstat(self._fd).st_size, self.BUFSIZE))
             self.newlines = b.count(b"\n") + (not b)
             ptr = self.buffer.tell()
             self.buffer.seek(0, 2), self.buffer.write(b), self.buffer.seek(ptr)
@@ -65,12 +70,12 @@ class IOWrapper(IOBase):
         self.read = lambda: self.buffer.read().decode("ascii")
         self.readline = lambda: self.buffer.readline().decode("ascii")
 
-if os.environ.get('LOCAL') != '1':
-    sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
+
+sys.stdin, sys.stdout = IOWrapper(sys.stdin), IOWrapper(sys.stdout)
 
 
 def input():
-    return sys.stdin.readline().rstrip("\r\n")
+    return sys.stdin.readline()
 
 
 def mp():
@@ -79,6 +84,7 @@ def mp():
 
 def li():
     return list(map(int, input().split()))
+
 
 def bootstrap(f, stack=[]):
     def wrappedfunc(*args, **kwargs):
@@ -97,6 +103,7 @@ def bootstrap(f, stack=[]):
         return to
 
     return wrappedfunc
+
 
 if __name__ == "__main__":
     main()
