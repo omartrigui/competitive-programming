@@ -19,7 +19,7 @@ from types import GeneratorType
 
 def main():
     t = int(input())
-    for t in range(t):
+    for _ in range(t):
         n = int(input())
 
 
