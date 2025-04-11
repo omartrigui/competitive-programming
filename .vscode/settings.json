@@ -10,5 +10,9 @@
     "cSpell.enabled": false,
     "editor.suggest.showSnippets": false,
     "github.copilot.editor.enableAutoCompletions": false,
-    "github.copilot.editor.enableCodeActions": false
+    "github.copilot.editor.enableCodeActions": false,
+    "autopep8.args": [
+        "--max-line-length=150",
+        "--experimental"
+    ],
 }

@@ -1,6 +1,9 @@
+*.py
 .cph
-A_*
-B_*
-C_*
-D_*
-E_*
+
+!.gitignore
+!.gitmodules
+!main.py
+!README.md
+!.vscode/*
+!lib/*

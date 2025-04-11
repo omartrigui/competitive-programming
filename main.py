@@ -6,6 +6,7 @@ import sys
 import time
 from bisect import bisect_left, bisect_right, insort_left, insort_right
 from collections import Counter, OrderedDict, defaultdict, deque
+from fractions import Fraction
 from functools import lru_cache
 from heapq import heapify, heappop, heappush, heappushpop
 from io import BytesIO, IOBase
