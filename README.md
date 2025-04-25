@@ -6,6 +6,7 @@ This repository serves as a personal toolbox for competitive programming, contai
 - Pre-written functions for common competitive programming tasks  
 - Efficient data structures and algorithm implementations  
 - Integrated **[PyRival](https://github.com/cheran-senthil/PyRival)** as a submodule for additional optimized algorithms  
+- Includes a brute force stress tester for automated solution validation
 
 ## Usage  
 Clone the repository along with submodules:  

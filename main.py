@@ -11,8 +11,8 @@ from functools import lru_cache
 from heapq import heapify, heappop, heappush, heappushpop
 from io import BytesIO, IOBase
 from itertools import (accumulate, combinations, combinations_with_replacement,
-                       compress, permutations, product)
-from math import ceil, factorial, floor, gcd, inf, isqrt, log2, pi, sqrt
+                       compress, cycle, permutations, product)
+from math import ceil, factorial, floor, gcd, inf, isqrt, lcm, log2, pi, sqrt
 from string import ascii_lowercase, ascii_uppercase
 from types import GeneratorType
 
