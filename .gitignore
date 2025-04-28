@@ -8,3 +8,4 @@
 !.vscode/*
 !lib/*
 !gen.py
+!brute.py

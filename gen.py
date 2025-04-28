@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+import random
+import string
+
 """
 Random Test Case Generator for Stress Testing
 
@@ -7,8 +10,6 @@ Usage:
     python gen.py
 """
 
-import random
-import string
 
 # ------------------ Random Generators ------------------ #
 
