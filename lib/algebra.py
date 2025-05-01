@@ -1,5 +1,7 @@
+from math import isqrt
+
+
 def prime_factors(n):
-    """For numbers below 10**6 trial division is ~3x faster than Pollard's Rho."""
     if n < 2:
         return []
 
@@ -26,3 +28,12 @@ def prime_factors(n):
         idx += 1
 
     return factors[:idx]
+
+
+def divisors(n):
+    divisors = set()
+    for i in range(1, isqrt(n) + 1):
+        if n % i == 0:
+            divisors.add(i)
+            divisors.add(n // i)
+    return sorted(divisors)

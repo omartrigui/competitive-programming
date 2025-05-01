@@ -1,17 +1,14 @@
 #!/usr/bin/env python
 import os
-import random
 import re
 import sys
-import time
-from bisect import bisect_left, bisect_right, insort_left, insort_right
+from bisect import bisect_left, bisect_right
 from collections import Counter, OrderedDict, defaultdict, deque
 from fractions import Fraction
-from functools import lru_cache
+from functools import cache, lru_cache
 from heapq import heapify, heappop, heappush, heappushpop
 from io import BytesIO, IOBase
-from itertools import (accumulate, combinations, combinations_with_replacement,
-                       compress, cycle, permutations, product)
+from itertools import accumulate, combinations, compress, cycle, permutations
 from math import ceil, factorial, floor, gcd, inf, isqrt, lcm, log2, pi, sqrt
 from string import ascii_lowercase, ascii_uppercase
 from types import GeneratorType
