@@ -19,7 +19,7 @@ if len(sys.argv) != 3:
 CORRECT = sys.argv[1]
 WRONG = sys.argv[2]
 
-for i in range(1, 1000):
+for i in range(1, 10000):
     print(f"Test #{i}")
 
     try:
